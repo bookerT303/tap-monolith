@@ -29,7 +29,9 @@ Install the following:
     - follow the directions for **Cleanup** and copy the file into the 'kube' directory
 
    - follow the directions for **IDE Configuration** and copy the file into the 'kube' directory
-   - for Intellij you have to install the plugins `Settings -> Plugins` and search for 'tanzu'
+   - Intellij plugins `Settings -> Plugins`
+       - search for 'tanzu' and install 'Tanzu Developer Tools'
+       - Follow the steps listed at https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/application-accelerator-intellij.html to install the Application Accelerator plugin
 
 # End of Setup
 
