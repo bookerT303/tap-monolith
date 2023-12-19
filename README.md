@@ -1,1 +1,34 @@
 # tap-monolith
+
+TAP for a single monolith application
+
+## Setup
+
+Install the following:
+
+- kubectl
+
+    - try `kubectl version`
+    - if command is not found then you need to install from https://kubernetes.io/docs/tasks/tools/#kubectl
+    - try `kubectl version` and if not correct might need to also
+      ```
+      brew list kubectl  # copy the first line from the output
+      ln -s -F /opt/homebrew/Cellar/kubernetes-cli/1.29.0/bin/kubectl /usr/local/bin/kubectl
+      ```
+- tanzu-cli
+
+  - try `tanzu version`
+  - if command is not found then you need to install from https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/install-tanzu-cli.html#install-or-update-the-tanzu-cli-and-plugins-3
+  - try `tanzu version`
+  
+
+- TAP workspace (good only for 8 hours)
+    
+    - get a TAP workspace using https://tanzu.academy/guides/developer-sandbox
+    - follow the directions for **Kubernetes Configuration** and copy the file into the 'kube' directory
+    - follow the directions for **Cleanup** and copy the file into the 'kube' directory
+
+   - follow the directions for **IDE Configuration** and copy the file into the 'kube' directory
+   - for Intellij you have to install the plugins `Settings -> Plugins` and search for 'tanzu'
+
+- Create the basic web app using the Tanzu Application Accelerator
