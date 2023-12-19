@@ -45,10 +45,10 @@ Install the following:
   - follow the directions for **IDE Configuration** and copy the file into the 'kube' directory
   - Intellij plugins `Settings -> Plugins`
     - search for 'tanzu' and install 'Tanzu Developer Tools'
-    - Follow the steps listed at https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/application-accelerator-intellij.html to install the Application Accelerator plugin
-      - might not be obvious that you select the file and have to click apply to see the plugin in the list of installed plugins.
-      - Even less obvious is that you need to look at the 'Deploy App: Command Line' and get the `server-url` for setting the plugin
-      configuration `Settings -> Tanzu Application Accelerator`
+    - ~~Follow the steps listed at https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/application-accelerator-intellij.html to install the Application Accelerator plugin~~
+      - ~~might not be obvious that you select the file and have to click apply to see the plugin in the list of installed plugins.~~
+      - ~~Even less obvious is that you need to look at the 'Deploy App: Command Line' and get the `server-url` for setting the plugin~~
+      ~~configuration `Settings -> Tanzu Application Accelerator`~~
 
 # End of Setup
 
