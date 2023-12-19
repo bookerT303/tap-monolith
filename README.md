@@ -25,7 +25,7 @@ Install the following:
 - TAP workspace (good only for 8 hours)
     
     - get a TAP workspace using https://tanzu.academy/guides/developer-sandbox
-    - follow the directions for **Kubernetes Configuration** and copy the file into the 'kube' directory
+    - follow the directions for **Kubernetes Configuration** and copy the files into the 'kube' directory
     - follow the directions for **Cleanup** and copy the file into the 'kube' directory
 
    - follow the directions for **IDE Configuration** and copy the file into the 'kube' directory

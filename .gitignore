@@ -1,3 +1,4 @@
 /.idea/
 kube/set-context.sh
 kube/unset-context.sh
+kube/config
