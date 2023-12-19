@@ -31,4 +31,7 @@ Install the following:
    - follow the directions for **IDE Configuration** and copy the file into the 'kube' directory
    - for Intellij you have to install the plugins `Settings -> Plugins` and search for 'tanzu'
 
-- Create the basic web app using the Tanzu Application Accelerator
+# End of Setup
+
+Now that we are setup we can start with creating a basic web app.
+`git checkout basic-web-app` to continue
