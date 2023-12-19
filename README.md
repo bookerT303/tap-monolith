@@ -32,6 +32,7 @@ Install the following:
    - Intellij plugins `Settings -> Plugins`
        - search for 'tanzu' and install 'Tanzu Developer Tools'
        - Follow the steps listed at https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/application-accelerator-intellij.html to install the Application Accelerator plugin
+         - might not be obvious that you select the file and have to click apply to see the plugin in the list of installed plugins.
 
 # End of Setup
 
