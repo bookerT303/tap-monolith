@@ -1,6 +1,6 @@
-# tap-monolith
+# TAP Monolith Instructions
 
-TAP for a single monolith application
+TAP for a single application
 
 If you did not start from the command line.... close Intellij Idea and
 change to the project directory and use the command launcher `Idea .`
@@ -57,12 +57,14 @@ Install the following:
   - follow the directions for **IDE Configuration** and copy the file into the 'kube' directory
   - Intellij plugins `Settings -> Plugins`
     - search for 'tanzu' and install 'Tanzu Developer Tools'
-    - ~~Follow the steps listed at https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/application-accelerator-intellij.html to install the Application Accelerator plugin~~
-      - ~~might not be obvious that you select the file and have to click apply to see the plugin in the list of installed plugins.~~
-      - ~~Even less obvious is that you need to look at the 'Deploy App: Command Line' and get the `server-url` for setting the plugin~~
-      ~~configuration `Settings -> Tanzu Application Accelerator`~~
+    - Follow the steps listed at https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/application-accelerator-intellij.html to install the Application Accelerator plugin~~
+      - might not be obvious that you select the file and have to click apply to see the plugin in the list of installed plugins.
+      - Even less obvious is that you need copy the link to the 'Tanzu Developer Portal' from either page 1 or 2 of the Tap Sanbox left hand instructions.
+      - Configuration `Settings -> Tanzu Application Accelerator` and paste in that URL.
 
 # End of Setup
 
-Now that we are setup we can start with creating a basic web app.
-`git checkout basic-web-app` to continue
+TODO - Create the src code using the accelerator plugin
+TODO - start the workload
+TODO - debug
+TODO - add Actuators
