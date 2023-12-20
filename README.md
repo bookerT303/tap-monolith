@@ -2,6 +2,9 @@
 
 TAP for a single monolith application
 
+If you did not start from the command line.... close Intellij Idea and
+change to the project directory and use the command launcher `Idea .`
+
 ## Setup
 
 Install the following:
