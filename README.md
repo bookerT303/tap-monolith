@@ -34,6 +34,12 @@ Install the following:
       That will get all the tanzu plugins that are needed.
   - try `tanzu version`
   
+- Tilt
+  - try `tilt version`
+  - if command is not found then
+
+    - install tilt from https://docs.tilt.dev/install.html
+  - try `tilt version`
 
 - TAP workspace (good only for 8 hours)
     
