@@ -2,21 +2,24 @@
 
 TAP for a single application
 
-If you did not start from the command line.... close Intellij Idea and
-change to the project directory and use the command launcher `Idea .`
+**If you did not start from the command line.... close Intellij Idea and
+change to the project directory and use the command launcher `Idea .`**
+
+<details close>
+<summary>How to setup the Environment</summary>
 
 ## Setup
 
-Install the following:
+### Install the following:
 
 - kubectl
 
     - try `kubectl version`
-    - if command is not found then you need to install from https://kubernetes.io/docs/tasks/tools/#kubectl
-    - try `kubectl version` and if not correct might need to also
+    - if command is not found then install from https://kubernetes.io/docs/tasks/tools/#kubectl
+    - try `kubectl version` and if not the correct version then might need to also
       ```
       brew list kubectl  # copy the first line from the output
-      ln -s -F /opt/homebrew/Cellar/kubernetes-cli/1.29.0/bin/kubectl /usr/local/bin/kubectl
+      ln -s -F /opt/homebrew/Cellar/kubernetes-cli/1.29.0/bin/kubectl `which kubectl`
       ```
 - tanzu-cli
 
@@ -62,9 +65,74 @@ Install the following:
       - Even less obvious is that you need copy the link to the 'Tanzu Developer Portal' from either page 1 or 2 of the Tap Sanbox left hand instructions.
       - Configuration `Settings -> Tanzu Application Accelerator` and paste in that URL.
 
-# End of Setup
+</details>
 
-TODO - Create the src code using the accelerator plugin
-TODO - start the workload
-TODO - debug
+<details close>
+<summary> Restarting? Is the TAP Workspace config current?</summary>
+- follow the directions from the TAP workspace for **Kubernetes Configuration** and copy the files into the '~/.kube' directory
+- `chmod +x ~/.kube/*.sh`
+- `~/.kube/set-context.sh`
+- Copy the link to the 'Tanzu Developer Portal' from either page 1 or 2 of the Tap Workspace left hand instructions.
+  
+  Configuration `Settings -> Tanzu Application Accelerator` and paste in that URL.
+</details>
+
+# Create the basic web app
+~~Refer to the TAP Developer Sandbox for the 'Deploy App: Command Line' to generate basic web app source code.~~
+
+~~Instead of using the '--options' shown on the sandbox use '--options-file accelerator-config.json'~~
+~~After unzipping the tanzu-java-web-app.zip we need to copy all the files into this directory~~
+~~`cp -R -n tanzu-java-web-app/* .`~~
+~~`cp -R -n tanzu-java-web-app/.* .`~~
+~~`cp tanzu-java-web-app/README.md tanzu-README.md`~~
+~~`rm -rf tanzu-java-web-app tanzu-java-web-app.zip`~~
+
+Create a new Intellij Idea project "File -> New -> Project..." Select the 'Tanzu Application Accelerator'
+
+In the Tanzu Application Accelerator find the "Tanzu Java Web App" in the list
+
+Select it and click 'Next'.
+
+Enter the 'Project Location' the folder where the project folder will be created.
+
+Select:
+- 'Gradle' as the Build tool
+- 'intellij' for the IDE
+- Spring Boot Version '3.1'
+- Jave Version '17'
+and click 'Next'
+
+Enter your repository information OR git init in the new project....
+
+click 'Next'
+
+click 'Next'
+
+Wait until the zip has been down loaded
+
+click 'Create'
+
+Open in a new Intellij Window.
+
+In that new Intellij Window:
+
+Use the Terminal to start tilt `tilt up`
+
+In the 'Project' view right click on the workload.yaml file and at the bottom of the menu
+find 'Tanzu' and in the submenu click 'Apply Workload'
+
+**NOTE:** Avoid starting the workload from the command line since the Tanzu Development Tools Plugin does not fully
+work with a workload started that way.
+
+There will be lots of messages as the workload is started and eventually
+the tanzu-panel will show the running workload.
+
+From the tanzu-panel expand the 'Running Application' and right click and describe the application
+so that you can find the 'URL' (Not the Address: URL)
+
+To get the application logs keep expanding until the pod is shown and right click and 'Show Logs'
+
+# Enable Debug
+To debug using the Tanzu Panel expand the workload and right click on 'Debug Workload'
+
 TODO - add Actuators
