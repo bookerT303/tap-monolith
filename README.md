@@ -2,9 +2,6 @@
 
 TAP for a single application
 
-**If you did not start from the command line.... close Intellij Idea and
-change to the project directory and use the command launcher `Idea .`**
-
 <details close>
 <summary>How to setup the Environment</summary>
 
@@ -67,6 +64,31 @@ change to the project directory and use the command launcher `Idea .`**
 
 </details>
 
+<details close>
+<summary>Tanzu Development Tools Plugin Error?</summary>
+if you see:
+
+![Tanzu Development Tools Plugin Error](doc/images/TanzuDevelopmentToolsPluginError.png "Tanzu Development Tools Plugin Error")
+
+Intellij idea started from the Mac OS dock does not have an environment so the plugin cannot find the `tanzu` cli.
+
+### Fixing Intellij Idea not having an environment on Mac OS
+- Install the Intellij idea command launcher (Tools -> Create Command-Line Launcher...)
+- You need to location of the launcher (`which idea`)
+- Use the `Automator` to create an 'Application' that is a 'Run Shell Script'
+
+  Here is my script:
+  ```
+  source $HOME/.zshrc
+  /usr/local/bin/idea
+  ```
+  Since I use zsh I used that for the shell and initialized the shell from my .zshrc
+- Save that in 'Application' as 'Intellij Idea with Env.app'
+- Right click on 'Intellij Idea with Env.app' to 'Get Info' and drag the Original Intellij Idea.app to the icon at the top left corner so it looks like Intellij Idea
+- Drag 'Intellij Idea With Env.app' to the Dock
+
+Now when Intellij is started from the Dock it will have an environment.
+</details>
 <details close>
 <summary> Restarting? Is the TAP Workspace config current?</summary>
 - follow the directions from the TAP workspace for **Kubernetes Configuration** and copy the files into the '~/.kube' directory
