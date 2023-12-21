@@ -35,6 +35,15 @@ TAP for a single application
       `tanzu plugin install --group vmware-tap/default:v1.7.2`
 
       That will get all the tanzu plugins that are needed.
+    - Enable tanzu autocomplete
+
+      - `tanzu completion zsh > ~/.tanzu-complete.zsh`
+      - edit ~/.zshrc and add
+      ```
+      autoload -U +X compinit && compinit
+      source $HOME/.tanzu-complete.zsh
+      ```
+      - `source ~/.zshrc`
   - try `tanzu version`
   
 - Tilt
